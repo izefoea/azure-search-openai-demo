@@ -1,6 +1,6 @@
 <!--
 ---
-name: RAG chat app with your data (Python)111
+name: RAG chat app with your data (Python)11123
 description: Chat with your domain data using Azure OpenAI and Azure AI Search.
 languages:
 - python
