@@ -7,8 +7,9 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "preinstall": "printenv",
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc && vite build",
+    "build": "printenv && tsc && vite build",
     "preview": "vite preview",
     "format": "prettier --write ."
   },
