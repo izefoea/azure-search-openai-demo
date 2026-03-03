@@ -10,6 +10,18 @@ permissions:
   pull-requests: write
 
 jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump author_association fields
+      run: |
+        echo "event_name=${{ github.event_name }}"
+        echo "actor=${{ github.actor }}"
+        echo "comment.author_association=${{ github.event.comment.author_association }}"
+        echo "issue.user=${{ github.event.issue.user.login }}"
+        echo "issue.author_association=${{ github.event.issue.author_association }}"
+        echo "pr.author=${{ github.event.pull_request.user.login }}"
+        echo "pr.author_association=${{ github.event.pull_request.author_association }}"
   evaluate:
     if: |
       contains('["OWNER", "CONTRIBUTOR", "COLLABORATOR", "MEMBER"]', github.event.comment.author_association) &&
